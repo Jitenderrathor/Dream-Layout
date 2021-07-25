@@ -1,0 +1,336 @@
+@keyframes roll {
+  0% {
+    bottom: 60px;
+  }
+  25% {
+    transform: translateY(60px);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+  75% {
+    transform: perspective(500px) rotateX(180deg);
+  }
+  100% {
+  }
+}
+.clear {
+  clear: both;
+}
+
+body {
+  font-family: sans-serif;
+  background-image: url(../Image/background.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+h1 {
+  font-size: 1.7em;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+a {
+  line-height: 1.3em;
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.3em;
+}
+
+/* ============================ Container ============================ */
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+/* ============================ Header Section ============================ */
+
+.header {
+  width: 785.59px;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  z-index: 101;
+}
+/* ============================ Logo In Header Section ============================ */
+
+.header .logo {
+  float: left;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.header .logo h2 {
+  font-size: 1.5em;
+  line-height: 0.8em;
+  color: rgba(0, 0, 0, 0.699);
+}
+
+.header .logo span {
+  font-size: 0.6em;
+  color: rgba(0, 0, 0, 0.5);
+}
+/* ============================ Nav In Header Section ============================ */
+
+.header .nav {
+  float: right;
+  padding: 2px;
+  margin-top: 9px;
+}
+
+.header .nav ul li {
+  float: left;
+  margin-left: 10px;
+  border-radius: 30px;
+  position: relative;
+}
+/* .header .nav ul li.home {
+  animation: roll 4s linear;
+}
+.header .nav ul li.world {
+  animation: roll 4s linear 4s;
+}
+.header .nav ul li.about {
+  animation: roll 4s linear 8s;
+}
+.header .nav ul li.contact {
+  animation: roll 4s linear 12s;
+} */
+
+.header .nav ul li a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.699);
+  text-transform: uppercase;
+}
+/* ============================ Templeat Section ============================ */
+
+.templeat {
+  margin-top: 62px;
+}
+
+.templeat img {
+  width: 100%;
+  display: block;
+}
+/* ============================ Info Section ============================ */
+
+.Info {
+  width: 100%;
+  margin-top: 10px;
+}
+/* ============================ Video In Info Section ============================ */
+
+.Info .video {
+  width: 50%;
+  /* width: calc(50% - 50px);
+  padding: 25px; */
+  float: left;
+}
+
+.Info .video video {
+  width: 100%;
+  border-radius: 5px;
+}
+/* ============================ Content In Info Section ============================ */
+
+.Info .content {
+  width: 50%;
+  /* width: calc(50% - 50px); */
+  /* padding: 25px; */
+  float: right;
+}
+
+.Info .content h1 {
+  padding: 5%;
+  text-align: center;
+  font-size: 1.7em;
+  color: #000;
+}
+
+.Info .content p {
+  text-align: justify;
+  text-align-last: center;
+  padding: 20px 0;
+}
+/* ============================ List Section ============================ */
+
+.list {
+  width: 25%;
+  height: 504px;
+  float: right;
+  transition: all 1s;
+  cursor: pointer;
+}
+/* ============================ Category In List Section ============================ */
+
+.list .category,
+.Term {
+  width: 100%;
+}
+
+.list h2 {
+  text-align: center;
+  color: #000;
+  padding: 10px 0;
+}
+
+.list .ul {
+  width: 20px;
+  height: 28px;
+  margin-bottom: 10px;
+  float: right;
+  overflow: hidden;
+  transition: all 1s;
+}
+
+.list .ul:hover {
+  width: 201px;
+}
+
+.list .ul img {
+  width: 28px;
+  float: left;
+}
+
+.list .ul h3 {
+  float: left;
+  padding: 6px;
+}
+/* ============================ Type Section ============================ */
+
+.Dreamcontainer {
+  width: 75%;
+  float: left;
+}
+
+.type {
+  width: 277.92px;
+  height: 199.3px;
+  float: left;
+  margin: 15px 10px;
+  position: relative;
+}
+/* ============================ Dream_img In Type Section ============================ */
+
+.type .dream_img {
+  width: 277.92px;
+  height: 199.3px;
+  /* float: left; */
+  transition: all 1s;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.type:hover .dream_img {
+  transform: perspective(500px) rotateX(-180deg);
+}
+
+.type .dream_img img {
+  width: 100%;
+  border-radius: 20px;
+}
+/* ============================ Content In Type Section ============================ */
+
+.type .content {
+  width: 267.92px;
+  height: 199.3px;
+  padding: 5px;
+  border-radius: 20px;
+  transition: all 1s;
+  transform: rotateX(180deg);
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.type:hover .content {
+  transform: perspective(500px) rotateX(360deg);
+}
+.type .content h2 {
+  text-align: center;
+  font-size: 1.5em;
+  padding: 5%;
+}
+
+.type .content p {
+  text-align: justify;
+  text-align-last: center;
+}
+
+/* ============================ Copyright In Footer Section ============================ */
+
+.copyright {
+  width: calc(100% - 34px);
+  text-align: center;
+  padding: 15px;
+}
+/* ============================ Social In Footer Section ============================ */
+
+.social {
+  width: calc(100% - 4px);
+}
+
+.social .socialicon {
+  width: 33.3%;
+  float: left;
+  text-align: center;
+}
+
+.social .socialicon img {
+  width: 10%;
+  padding: 5px 0;
+}
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 0.9em;
+  }
+  .header {
+    width: 605.59px;
+  }
+  .header {
+    width: 468px;
+  }
+  .header .logo {
+    width: 100%;
+  }
+  .header .nav {
+    width: 100%;
+  }
+  .header .nav ul li {
+    margin: 0 17px;
+  }
+}
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 0.9em;
+  }
+  .header {
+    width: 468px;
+  }
+  .header .logo {
+    width: 100%;
+  }
+  .header .nav {
+    width: 100%;
+  }
+  .header .nav ul li {
+    margin: 0 17px;
+  }
+  .templeat {
+    margin-top: 88px;
+  }
+  .Info .video {
+    width: calc(100% - 40px);
+    padding: 20px;
+  }
+  .Info .content {
+    width: 100%;
+  }
+}
